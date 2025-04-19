@@ -47,11 +47,22 @@ Perfect! Let’s go step-by-step, documenting everything clearly — like a refe
 
 #### On Linux (Debian/Ubuntu):
 ```bash
-sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https
-curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo apt-key add -
-curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo tee /etc/apt/sources.list.d/caddy-stable.list
+# 1. Install Necessary Dependencies
+sudo apt update
+sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https curl gnupg2
+# 2. Add Caddy GPG key
+curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' \
+  | sudo gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
+
+# 3. Add the Caddy APT repo securely using the key
+echo "deb [signed-by=/usr/share/keyrings/caddy-stable-archive-keyring.gpg] \
+https://dl.cloudsmith.io/public/caddy/stable/deb/debian any-version main" \
+| sudo tee /etc/apt/sources.list.d/caddy-stable.list
+
+# 4. Update & install
 sudo apt update
 sudo apt install caddy
+
 ```
 
 #### Using Docker:
