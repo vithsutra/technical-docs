@@ -1,13 +1,16 @@
----
 
 # 🔐 Setting Up SSH Public Key on a Linux VM
 
 This guide helps you:
 
-- Generate a secure SSH key pair
-- Set up **key-based SSH login** to a remote Linux VM
-- Learn both **automatic** and **manual** methods to copy the public key
-- Understand how to SSH using your **private key**
+- ✅ Generate a secure SSH key pair  
+- ✅ Set up **key-based SSH login** to a remote Linux VM  
+- ✅ Learn both **automatic** and **manual** methods to copy the public key  
+- ✅ Understand how to SSH using your **private key**
+
+---
+
+This will now render correctly, with each bullet point on a new line. Let me know if you want a styled emoji-less version too!
 
 ---
 
