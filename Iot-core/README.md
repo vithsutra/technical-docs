@@ -78,6 +78,8 @@ This guide walks you step-by-step through the process of:
 7. Create the rule
 
 ---
+![iot-core](https://github.com/user-attachments/assets/8fbb4038-172c-4ed6-af9a-d19d27a7aae6)
+
 
 ## ✅ STEP 5: Test `mosquitto_pub` Locally
 
