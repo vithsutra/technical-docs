@@ -1,6 +1,4 @@
-Here is your complete guide in `.md` (Markdown) format:
 
----
 
 # 🚀 AWS IoT MQTT → Lambda → MongoDB Integration Guide
 
@@ -96,10 +94,10 @@ mosquitto_pub \
   --cafile AmazonRootCA1.pem \
   --cert certificate.pem.crt \
   --key private.pem.key \
-  -h a8jmdqpykxxu3-ats.iot.us-east-1.amazonaws.com \
+  -h a8jmdqpykxxu3-ats.iot.us-east-1.amazonaws.com \  //your end point
   -p 8883 \
   -t device/device1/data \
-  -m '{"temp": 25}' \
+  -m '{"temp": 25}' \   //produce data
   --tls-version tlsv1.2 \
   --id testClient123 \
   -d
